@@ -18,7 +18,7 @@ public class ArtsApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:8080").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE");
+                registry.addMapping("/**").allowedOrigins("https://frontendarg-2b995.web.app").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE");
             }
         };
     }
