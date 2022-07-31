@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hardskill")
-@CrossOrigin(origins = "https://frontendarg-2b995.web.app/")
+@CrossOrigin(origins = "https://frontendarg-2b995.web.app")
 public class CHardskill {
     @Autowired
     SHardskill sHardskill;
