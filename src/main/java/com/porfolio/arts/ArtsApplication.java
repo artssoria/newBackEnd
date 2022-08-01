@@ -2,6 +2,9 @@ package com.porfolio.arts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class ArtsApplication {
@@ -10,14 +13,13 @@ public class ArtsApplication {
         SpringApplication.run(ArtsApplication.class, args);
     }
 
-@Bean
-public WebMvcConfigurer corsConfigurer() {
-return new WebMvcConfigurer() {
-@Override
-public void addCorsMappings(CorsRegistry registry) {
-registry.addMapping("/**").allowedOrigins("https://frontendarg-2b995.web.app").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS","HEAD");
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("https://frontendarg-2b995.web.app").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD");
+            }
+        };
+    }
 }
-};
-}
-}
-    
