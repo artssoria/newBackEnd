@@ -25,11 +25,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/explab")
-@CrossOrigin(origins = "https://frontendarg-2b995.web.app")
+
 public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;
-    
+    @CrossOrigin(origins = "https://frontendarg-2b995.web.app")
     @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
