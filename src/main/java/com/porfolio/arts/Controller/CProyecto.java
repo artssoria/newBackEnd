@@ -25,11 +25,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/proyecto")
+@CrossOrigin
 
 public class CProyecto {
     @Autowired
     SProyecto sProyecto;
-    @CrossOrigin(origins = "https://frontendarg-2b995.web.app")
+    
     @GetMapping("/lista")
     public ResponseEntity<List<Proyecto>> list(){
         List<Proyecto> list = sProyecto.list();

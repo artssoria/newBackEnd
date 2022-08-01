@@ -26,11 +26,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-
+@CrossOrigin
 public class CEducacion {
     @Autowired
     Seducacion sEducacion;
-    @CrossOrigin(origins = "https://frontendarg-2b995.web.app")
+    
     @GetMapping("/lista")
     public ResponseEntity<List<Educacion>> list(){
         List<Educacion> list = sEducacion.list();

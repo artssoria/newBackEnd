@@ -27,11 +27,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hardskill")
+@CrossOrigin
 
 public class CHardskill {
     @Autowired
     SHardskill sHardskill;
-    @CrossOrigin(origins = "https://frontendarg-2b995.web.app")
+    
     @GetMapping("/lista")
     public ResponseEntity<List<Hardskill>> list(){
         List<Hardskill> list = sHardskill.list();
